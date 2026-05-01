@@ -1,0 +1,351 @@
+:root{
+    --cream: #FDF6EC;
+    --warmWhite:#FFFAF4;
+    --caramel:#C8860A;
+    --caramelLight:#E5A020;
+    --brown:#5C3A1E;
+    --darkBrown:#3B2010;
+    --blush:#F2C9A0;
+    --rose:#E8956D;
+    --sage:#7A9E7E;
+    --text:#2E1A0E;
+    --muted:#8A6A50;
+    --cardBg:#FFFDF8;
+    --border:#E8D5B7;
+    --shadow: 0 4px 20px rgba(92, 58, 30, 0.12);
+    --shadowHover: 0 8px 32px rgba(92, 58, 30, 0.22);
+    --radius: 14px;
+    --fontDisplay: 'Playfair Display', Georgia, serif;
+    --fontBody: 'Lato', 'Segoe UI', sans-serif;
+    --transition: 0.3s ease;
+}
+
+.careerHero{
+  background: linear-gradient(135deg, var(--brown), var(--darkBrown));
+  color: #FFF;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.careerContainer{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.careerContainer .sectionLabel{
+  background: rgba(200, 134, 10, 0.2);
+  color: var(--caramelLight);
+  border-color: rgba(200, 134, 10, 0.35)
+}
+
+.careerTitle{
+  font-family: var(--fontDisplay);
+  font-size: 32px;
+  color: var(--blush);
+  margin-bottom: 14px;
+}
+
+.careerDescription{
+  color: rgba(253, 246, 236, 0.82);
+  font-size: 16px;
+}
+
+.careerPath{
+  background: var(--warmWhite);
+  padding: 80px 0;
+}
+
+.timeline{
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--caramel), var(--rose));
+  transform: translateX(-50%);
+}
+
+.timelineItem{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.timelineItem:nth-child(odd){
+  flex-direction: row-reverse;
+}
+
+.timelineDot{
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  width: 48px;
+  height: 48px;
+  transform: translateX(-50%);
+  background: var(--caramel);
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  z-index: 2;
+  border: 4px solid var(--warmWhite);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  font-style: var(--fontDisplay);
+  color: var(--warmWhite);
+}
+
+.timelineItem:hover .timelineDot{
+  background: var(--rose);
+  transform: translateX(-50%) scale(1);
+}
+
+.timelineContect{
+  width: calc(50% - 50px);
+  padding: 24px;
+  background: var(--cardBg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.timelineContect:hover{
+  box-shadow: var(--shadowHover);
+  transform: scale(1.02);
+}
+
+.timelineItem:nth-child(odd) .timelineContect{
+  margin-right: 50px;
+}
+
+.timelineItem:nth-child(even) .timelineContect{
+  margin-left: 50px;
+}
+
+.timelineLevel{
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  margin-bottom: 6px;
+}
+
+.timelineContect h3{
+  font-family: var(--fontDisplay);
+  font-size: 19px;
+  color: var(--brown);
+  margin-bottom: 8px;
+}
+
+.timelineContect p{
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.timelineYears{
+  font-size: 13px;
+  color: var(--rose);
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.jobSection{
+  background: var(--cream);
+  padding: 80px 0;
+}
+
+.jobGrid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.jobCard{
+  background-color: var(--cardBg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  padding: 28px;
+}
+
+.jobCard:hover{
+  border-color: var(--caramel);
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+
+.jobTags{
+  display: flex;
+  flex-wrap: 8px;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tag{
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background-color: rgba(200, 134, 10, 0.1);
+  color: var(--caramel);
+  border: 1px solid rgba(200, 134, 10, 0.25);
+}
+
+.fullTime{
+  background: rgba(122, 158, 126, 0.1);
+  color: var(--sage);
+  border-color: rgba(122, 158, 126, 0.3);
+}
+
+.remote{
+  background: rgba(232, 149, 109, 0.1);
+  color: var(--rose);
+  border-color: rgba(232, 149, 109, 0.3);
+}
+
+.jobCard h3{
+  font-family: var(--fontDisplay);
+  color: var(--brown);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.jobCard p{
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  line-height: 1.55;
+}
+
+.faqSection{
+  background-color: var(--warmWhite);
+  padding: 80px 0;
+}
+
+.faqList{
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.faqItem{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faqItem.open{
+  border-color: var(--caramel);
+  box-shadow: var(--shadow);
+}
+
+.faqQuestion{
+  width: 100%;
+  border: none;
+  padding: 20px 24px;
+  background-color: var(--cardBg);
+  text-align: left;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fontBody);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--brown);
+  transition: var(--transition);
+}
+
+.faqQuestion:hover{
+  background: var(--cream);
+}
+
+.faqArrow{
+  font-size: 16px;
+  transition: transform 0.3 ease;
+  color: var(--caramel);
+}
+
+.faqItem.open .faqArrow{
+  transform: rotate(180deg);
+}
+
+.faqAnswer{
+  max-height: 0;
+  overflow: hidden;
+  background: var(--cardBg);
+  transition: max-height 0.4s ease;
+  padding: 0 24px;
+}
+
+.faqItem.open .faqAnswer{
+  max-height: 300px;
+}
+
+.faqAnswer p{
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 4px 0 20px;
+  color: var(--muted);
+}
+
+.Inner1{
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.sectionDesc{
+  margin: 0 auto;
+}
+
+.button buttonprimer{
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.Inner2{
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+@media screen and (max-width: 700px){
+  .careerTitle{
+    font-size: 26px;
+  }
+
+  .timeline::before{
+      left: 20px;
+  }
+
+  .timelineItem{
+      flex-direction: row;
+  }
+
+  .timelineDot{
+    left: 20px;
+  }
+
+  .timelineContect{
+    width: 100%;
+    margin-left: 60px;
+    margin-right: 0;
+  }
+
+  .jobGrid{
+    grid-template-columns: 1fr;
+  }
+}

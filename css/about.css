@@ -1,0 +1,194 @@
+:root{
+    --cream: #FDF6EC;
+    --warmWhite:#FFFAF4;
+    --caramel:#C8860A;
+    --caramelLight:#E5A020;
+    --brown:#5C3A1E;
+    --darkBrown:#3B2010;
+    --blush:#F2C9A0;
+    --rose:#E8956D;
+    --sage:#7A9E7E;
+    --text:#2E1A0E;
+    --muted:#8A6A50;
+    --cardBg:#FFFDF8;
+    --border:#E8D5B7;
+    --shadow: 0 4px 20px rgba(92, 58, 30, 0.12);
+    --shadowHover: 0 8px 32px rgba(92, 58, 30, 0.22);
+    --radius: 14px;
+    --fontDisplay: 'Playfair Display', Georgia, serif;
+    --fontBody: 'Lato', 'Segoe UI', sans-serif;
+    --transition: 0.3s ease;
+}
+
+.aboutHero{
+  color: #FFF;
+  background: linear-gradient(135deg, #C8860A 0%, #5C3A1E 100%);
+  padding: 100px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutHero h1{
+  font-family: var(--fontDisplay);
+  font-size: 2.5rem;
+  color: #FFF;
+  margin-bottom: 16px;
+}
+
+.aboutHero h1 em{
+  font-style: italic;
+  color: var(--blush);
+}
+
+.aboutHero p{
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.historySection{
+  padding: 80px 0;
+  background: var(--warmWhite);
+}
+
+.historyLayout{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  margin-top: 32px;
+}
+
+.historyText p{
+  color: var(--muted);
+  margin-bottom: 16px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.historyVisual{
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.historyVisual img{
+  width: 100%;
+  height: 420px;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s ease;
+}
+
+.historyVisual:hover img{
+  transform: scale(1.05);
+}
+
+.visiMisiSection{
+  padding: 80px 0;
+  background-color: var(--cream);
+}
+
+.vmGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.vmCard{
+  background-color: var(--cardBg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px;
+  transition: var(--transition);
+}
+
+.vmCard:hover{
+  box-shadow: var(--shadowHover);
+  transform: translateY(-4px);
+}
+
+.vmCard h3{
+  font-family: var(--fontDisplay);
+  font-size: 1.5rem;
+  color: var(--brown);
+  margin-bottom: 12px;
+}
+
+.vmCard p{
+  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.ctaSection{
+  background: linear-gradient(135deg, var(--brown), var(--darkBrown));
+  color: #FFF;
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.ctaContainer{
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.ctaContainer .sectionLabel{
+  background: rgba(200, 134, 10, 0.2);
+  color: var(--caramelLight);
+  border-color: rgba(200, 134, 10, 0.35);
+}
+
+.ctaTitle{
+  font-family: var(--fontDisplay);
+  font-size: 2rem;
+  color: var(--blush);
+  margin-bottom: 14px;
+}
+
+.ctaText{
+  color: rbga(253, 246, 236, 0.8);
+  margin-bottom: 32px;
+  font-size: 1rem;
+}
+
+.ctaButton{
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.textdiVm{
+  margin-top:14px;
+}
+
+.InnerInner{
+  text-align: center;
+  margin-bottom: 48px;
+}
+ 
+@media screen and (max-width: 700px){
+  .historyLayout{
+    grid-template-columns: 1fr;
+  }
+
+  .aboutHero h1{
+    font-size: 2rem;
+  }
+
+  .ctaTitle{
+    font-size: 1.6rem;
+  }
+
+  .vmGrid{
+    grid-template-columns: 1fr;
+  }
+
+  .historyVisual img{
+    height: 260px;
+  }
+}

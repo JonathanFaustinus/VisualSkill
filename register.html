@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Skill</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="icon" href="/Image/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap">
+    <script src="js/register.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="Image/logo.png">
+                <span>Visual</span>Skill
+            </div>
+            <ul class="links">
+                <a href="index.html">HOME</a>
+                <a href="course.html">COURSE</a>
+                <a href="career.html">CAREER</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="register.html" class="registerbutton">REGISTER</a>
+            </ul>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="registerPage">
+            <div class="registerContainer">
+                <div class="registerHeader">
+                    <h1>Join VisualSkill</h1>
+                    <p>Create your free account and start your bakery today!</p>
+                </div>
+
+                <div id="successBanner" class="success_banner">
+                    <h2 class="successTitle">Welcome to VisualSkill</h2>
+                    <p class="successMessage">Your account has been created successfully!</p>
+                    <a href="course.html" class="button button_outline success_link">Browse Courses</a>
+                </div>
+
+                <div class="registerCard">
+                    <form id="registerForm">
+                        <input type="text" name="fullname" id="fullname" placeholder="Full Name">
+                        <div class="formrow">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" name="dob" id="dob">
+                        </div>
+                        <div class="formrow">
+                            <label for="gender">Gender</label>
+                            <input type="radio" name="gender" id="gendermale" value="male">
+                            <label for="gendermale">Male</label>
+                            <input type="radio" name="gender" id="genderfemale" value="female">
+                            <label for="genderfemale">Female</label>
+                        </div>
+                        <input type="email" name="email" id="email" placeholder="E-Mail">
+                        <input type="phone" name="phone" id="phone" placeholder="Phone Number">
+                        <textarea name="address" id="address" placeholder="Address"></textarea>
+                        <p id="error"></p>
+                        <button type="submit" class="btn-submit">Create My Account</button>
+                    </form>
+                </div>
+                <div class="loginLink">Already have an account? <a href="#">Log in here</a></div>
+
+                <div class="validationCard">
+                    <strong class="validationTitle">Rules</strong>
+                    <ul class="validationList">
+                        <li>Email must contain "@" and a valid domain</li>
+                        <li>Full name must 4 - 20 Characters, no space</li>
+                        <li>Must be at least 13 years old</li>
+                        <li>Phone number atleast have 10 digits</li>
+                        <li>Gender selection required</li>
+                        <li>Address must be at least 10 characters</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 <strong>Visual Skill</strong> | All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

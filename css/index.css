@@ -1,0 +1,291 @@
+:root{
+    --cream: #FDF6EC;
+    --warmWhite:#FFFAF4;
+    --caramel:#C8860A;
+    --caramelLight:#E5A020;
+    --brown:#5C3A1E;
+    --darkBrown:#3B2010;
+    --blush:#F2C9A0;
+    --rose:#E8956D;
+    --sage:#7A9E7E;
+    --text:#2E1A0E;
+    --muted:#8A6A50;
+    --cardBg:#FFFDF8;
+    --border:#E8D5B7;
+    --shadow: 0 4px 20px rgba(92, 58, 30, 0.12);
+    --shadowHover: 0 8px 32px rgba(92, 58, 30, 0.22);
+    --radius: 14px;
+    --fontDisplay: 'Playfair Display', Georgia, serif;
+    --fontBody: 'Lato', 'Segoe UI', sans-serif;
+    --transition: 0.3s ease;
+}
+
+.hero{
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #3B2010 0%, #5C3A1E 50%, #C8860A 100%);
+}
+
+.heroPattern{
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(232, 149, 109, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(200, 134, 10, 0.2) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.heroContent{
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+.heroText{
+    color: #FFF;
+}
+
+.heroTitle{
+  font-family: var(--fontDisplay);
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.heroTitle em{
+  font-style: italic;
+  color: var(--caramelLight);
+}
+
+.heroDesc{
+  font-size: 1rem;
+  color: rgba(253, 246, 236, 0.82);
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+
+.heroStats{
+  display: flex;
+  gap: 32px;
+  margin-bottom: 36px;
+}
+
+.statItem{
+    text-align: center;
+}
+
+.statNum{
+  font-family: var(--fontDisplay);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--caramelLight);
+  display: block;
+}
+
+.statLabel{
+  font-size: 0.8rem;
+  color: rgba(253, 246, 236, 0.65);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.heroCourse{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.heroVisual{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImgWrap{
+  width: 100%;
+  max-width: 500px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  border: 3px solid rgba(253, 246, 236, 0.15);
+}
+
+.heroImgWrap img{
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.heroImgWrap:hover img{
+  transform: scale(1.05);
+}
+
+.promosiSection{
+  background: var(--warmWhite);
+  padding: 80px 0;
+}
+
+.promosiGrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.promosiCard{
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  min-height: 280px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--blush);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+}
+
+.promosiCard img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.promosiCard:hover{
+  transform: translateY(-6px);
+  box-shadow: var(--shadowHover);
+}
+
+.promoCardOverlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(30, 15, 5, 0.08) 0%, rgba(30, 15, 5, 0.7) 100%);
+  z-index: 1;
+}
+
+.promosiCard h3{
+  position: relative;
+  z-index: 2;
+  font-family: var(--fontDisplay);
+  font-size: 1.15rem;
+  color: #FFF;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.promosiCard p{
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.courseSection{
+  background: var(--cream);
+  padding: 80px 0;
+}
+
+.coursesGrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.coursesCard{
+  background: #FFF;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3 ease;
+  box-shadow: var(--shadowHover);
+}
+
+.coursesCard:hover{
+  transform: translateY(-8px);
+  box-shadow: var(--shadowHover);
+}
+
+.courseViewAll{
+  text-align: center;
+  margin-top: 40px;
+}
+
+.join{
+  background: linear-gradient(135deg, var(--brown) 0%, var(--darkBrown) 100%);
+  color: #FFF;
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.join .sectionInner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.join .sectionLabel{
+  background: rgba(200, 134, 10, 0.2);
+  color: var(--caramelLight);
+  border-color: rgba(200, 134, 10, 0.35);
+}
+
+.join .sectionTitle{
+    color: var(--blush);
+}
+
+.join .sectionDesc{
+  color: rgba(253, 246, 236, 0.75);
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.tombolAkhir{
+  text-align: center;
+  margin-top: 40px;
+}
+ 
+@media screen and (max-width: 700px){
+
+  .heroTitle{
+    font-size: 28px;
+  }
+
+  .heroContent{
+    grid-template-columns: 1fr;
+  }
+
+  .heroImgWrap img{
+    height: 260px;
+  }
+
+  .promosiGrid{
+    grid-template-columns: 1fr;
+  }
+
+  .coursesGrid{
+    grid-template-columns: 1fr;
+  }
+}
