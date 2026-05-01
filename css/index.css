@@ -57,7 +57,7 @@
 
 .heroTitle{
   font-family: var(--fontDisplay);
-  font-size: 38px;
+  font-size: 50px;
   line-height: 1.15;
   margin-bottom: 20px;
   font-weight: 700;
@@ -72,35 +72,10 @@
 }
 
 .heroDesc{
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: rgba(253, 246, 236, 0.82);
   margin-bottom: 36px;
   max-width: 480px;
-}
-
-.heroStats{
-  display: flex;
-  gap: 32px;
-  margin-bottom: 36px;
-}
-
-.statItem{
-    text-align: center;
-}
-
-.statNum{
-  font-family: var(--fontDisplay);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--caramelLight);
-  display: block;
-}
-
-.statLabel{
-  font-size: 0.8rem;
-  color: rgba(253, 246, 236, 0.65);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 .heroCourse{
